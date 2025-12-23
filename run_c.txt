@@ -1,0 +1,7 @@
+book:
+cc hello.c
+./a.out
+
+mine:
+gcc -o hello hello.c
+./hello
