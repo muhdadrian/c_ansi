@@ -1,22 +1,25 @@
-   #include <stdio.h>
-   /* print Fahrenheit-Celsius table
+#include <stdio.h>
+
+/* print Fahrenheit-Celsius table
        for fahr = 0, 20, ..., 300; floating-point version */
+
 int main()
-   {
+{
      float fahr, celsius;
      float lower, upper, step;
-lower = 0;
-upper = 300;
-step = 20;
-/* lower limit of temperatuire scale */
-/* upper limit */
-/* step size */
+
+
+     lower = 0;/* lower limit of temperatuire scale */
+     upper = 300;/* upper limit */
+     step = 20;/* step size */
+
      fahr = lower;
      while (fahr <= upper) {
          celsius = (5.0/9.0) * (fahr-32.0);
          printf("%3.0f %6.1f\n", fahr, celsius);
          fahr = fahr + step;
 }
+     return 0;
    }
 
 // This is much the same as before, except that fahr and celsius are declared to be float and the formula for conversion is written in a more natural way. We were unable to use 5/9 in the previous version because integer division would truncate it to zero. A decimal point in a constant indicates that it is floating point, however, so 5.0/9.0 is not truncated because it is the ratio of two floating-point values.
